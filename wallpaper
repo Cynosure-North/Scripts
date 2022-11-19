@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+DIR="$HOME/Pictures/wallpapers"
+PIC=$(ls $DIR/* | shuf -n1)
+
+gsettings set org.gnome.desktop.background picture-uri-dark "file://$PIC"
+
+
+# Crontab:
+##DISPLAY=:0	#May need this if I have more than one display, idk
+#DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+#* * * * * $HOME/Documents/Scripts/wallpaper
+
+
+# NOTE: Any folders in the directory must be hidden
